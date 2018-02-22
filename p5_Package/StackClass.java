@@ -19,7 +19,7 @@ public class StackClass {
 
     /**
      * Initialization constructor, constructs StackClass with initial capacity
-     * @param setCapacity the capacity of the StackClass
+     * @param setCapacity integer value to set capacity of stack array
      */
     public StackClass( int setCapacity )
     {
