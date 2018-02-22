@@ -126,4 +126,15 @@ public class IteratorClass {
     {
         return iterStorage[ iterIndex ];
     }
+
+    /**
+     * Move iterator cursor ot previous item if not currently at beginning
+     */
+    public void movePrevious()
+    {
+        if ( !isAtBeginning() )
+        {
+           iterIndex--;
+        }
+    }
 }
