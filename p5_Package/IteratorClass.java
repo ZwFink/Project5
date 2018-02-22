@@ -97,7 +97,7 @@ public class IteratorClass {
      */
     public boolean isEmpty()
     {
-        return iterSize == 0;
+        return(  iterSize == 0 );
     }
 
     /**
@@ -116,5 +116,14 @@ public class IteratorClass {
     public boolean isAtEnd()
     {
         return ( iterIndex == iterCapacity );
+    }
+
+    /**
+     * Gets value at current location of iterator
+     * @return integer value the item at iterator
+     */
+    public int retrieveAtCurrent()
+    {
+        return iterStorage[ iterIndex ];
     }
 }
