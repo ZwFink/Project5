@@ -90,4 +90,13 @@ public class IteratorClass {
     {
         iterIndex = 0;
     }
+
+    /**
+     * checks for empty list
+     * @return Boolean true if list is empty, false otherwise
+     */
+    public boolean isEmpty()
+    {
+        return iterSize == 0;
+    }
 }
