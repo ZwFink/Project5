@@ -73,4 +73,21 @@ public class IteratorClass {
            iterStorage[ index ] = copied.iterStorage[ index ];
        }
     }
+
+    /**
+     * Clears iterator array by setting size and iterator index to zero
+     */
+    public void clear()
+    {
+        iterSize = 0;
+        iterIndex = 0;
+    }
+
+    /**
+     * Sets iterator to beginning of list
+     */
+    public void setToBeginning()
+    {
+        iterIndex = 0;
+    }
 }
