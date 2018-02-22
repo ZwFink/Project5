@@ -137,4 +137,15 @@ public class IteratorClass {
            iterIndex--;
         }
     }
+
+    /**
+     * Move iterator cursor to next item if not currently at end
+     */
+    public void moveNext()
+    {
+        if ( !isAtEnd() )
+        {
+           iterIndex++;
+        }
+    }
 }
