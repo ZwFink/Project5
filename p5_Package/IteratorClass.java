@@ -32,6 +32,16 @@ public class IteratorClass {
     private int[] iterStorage;
 
     /**
+     * Default constructor
+     */
+    public IteratorClass()
+    {
+       iterCapacity = DEFAULT_CAPACITY;
+       iterIndex = 0;
+
+       iterStorage = new int[ DEFAULT_CAPACITY ];
+    }
+    /**
      * Initialization constructor
      * <p> Initializes array capacity, iterator index, prepares class for use
      * @param capacitySetting Initial capacity of storage class
