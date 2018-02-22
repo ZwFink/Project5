@@ -25,7 +25,7 @@ public class QueueClass {
 
     public QueueClass( QueueClass copied )
     {
-        
+
     }
 
 }
