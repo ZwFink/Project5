@@ -99,4 +99,22 @@ public class IteratorClass {
     {
         return iterSize == 0;
     }
+
+    /**
+     * Checks for iterator at beginning of list
+     * @return boolean true if iterator is at beginning of list, false otherwise
+     */
+    public boolean isAtBeginning()
+    {
+        return ( iterIndex == 0 );
+    }
+
+    /**
+     * Checks for iterator at end of list
+     * @return boolean true if iterator at end of list, false otherwise
+     */
+    public boolean isAtEnd()
+    {
+        return ( iterIndex == iterCapacity );
+    }
 }
