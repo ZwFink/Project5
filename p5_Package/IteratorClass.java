@@ -9,7 +9,12 @@ public class IteratorClass {
     /**
      * Provides constant -999999 for access failure message
      */
-    static int FAILED_ACCESS = -999999;
+    private static int FAILED_ACCESS = -999999;
+
+    /**
+     * Default integer value to put into newly created integer arrays
+     */
+    private static int FILL_VALUE = 0;
 
     /**
      * Stores current capacity of utility class
@@ -147,5 +152,46 @@ public class IteratorClass {
         {
            iterIndex++;
         }
+    }
+
+    /**
+     * Checks for resize and resizes to twice the current capacity if needed
+     */
+    private void checkForReSize()
+    {
+        int[] newArray;
+        int index = 0;
+        int newCapacity = iterCapacity * 2;
+
+        if( iterSize + 1 >= iterCapacity )
+        {
+           newArray = new int[ newCapacity ];
+
+
+           for( index = 0; index < newCapacity; index++ )
+           {
+                if( index < iterSize )
+                {
+                    newArray[ index ] = iterStorage[ index ];
+                }
+                else
+                {
+                    newArray[ index ] = FILL_VALUE;
+                }
+           }
+
+           iterStorage = newArray;
+        }
+    }
+
+    /**
+     * Inserts item prior to iterator index in list.
+     * <p> Iterator points to inserted item after completion
+     * <p> Resizes array if needed 
+     * @param newValue
+     */
+    public void insertPriorToIterator( int newValue )
+    {
+
     }
 }
