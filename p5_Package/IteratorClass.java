@@ -211,7 +211,7 @@ public class IteratorClass {
         int tempVal = 0;
 
         // move elements over one
-        for( index = iterSize; index > iterIndex; index-- )
+        for( index = iterSize; index > iterIndex - 1; index-- )
         {
             iterStorage[ index + 1 ] = iterStorage[ index ];
         }
@@ -236,14 +236,14 @@ public class IteratorClass {
 
       for( index = 0; index < iterSize; index++ )
       {
-          if( index == iterIndex - 1)
+          if( index == iterIndex )
           {
               returnString += BAR;
           }
 
           returnString += iterStorage[ index ];
 
-          if( index == iterIndex - 1)
+          if( index == iterIndex )
           {
               returnString += BAR;
           }
