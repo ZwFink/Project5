@@ -55,6 +55,7 @@ public class IteratorClass {
     {
        iterCapacity = capacitySetting;
        iterIndex = 0;
+       iterSize = capacitySetting;
 
        iterStorage = new int[ capacitySetting ];
        // TODO finish implementation of constructor
@@ -181,13 +182,14 @@ public class IteratorClass {
            }
 
            iterStorage = newArray;
+           iterCapacity = newCapacity;
         }
     }
 
     /**
      * Inserts item prior to iterator index in list.
      * <p> Iterator points to inserted item after completion
-     * <p> Resizes array if needed 
+     * <p> Resizes array if needed
      * @param newValue
      */
     public void insertPriorToIterator( int newValue )
