@@ -53,6 +53,7 @@ public class IteratorClass {
     {
        iterCapacity = DEFAULT_CAPACITY;
        iterIndex = 0;
+       iterSize = 0;
 
        iterStorage = new int[ DEFAULT_CAPACITY ];
     }
@@ -235,14 +236,14 @@ public class IteratorClass {
 
       for( index = 0; index < iterSize; index++ )
       {
-          if( index == iterIndex )
+          if( index == iterIndex - 1)
           {
               returnString += BAR;
           }
 
           returnString += iterStorage[ index ];
 
-          if( index == iterIndex )
+          if( index == iterIndex - 1)
           {
               returnString += BAR;
           }
