@@ -55,7 +55,7 @@ public class IteratorClass {
     {
        iterCapacity = capacitySetting;
        iterIndex = 0;
-       iterSize = capacitySetting;
+       iterSize = 0;
 
        iterStorage = new int[ capacitySetting ];
        // TODO finish implementation of constructor
@@ -121,7 +121,7 @@ public class IteratorClass {
      */
     public boolean isAtEnd()
     {
-        return ( iterIndex == iterCapacity );
+        return ( iterIndex == iterSize );
     }
 
     /**
