@@ -194,6 +194,19 @@ public class IteratorClass {
      */
     public void insertPriorToIterator( int newValue )
     {
+        checkForReSize();
 
+        int index = 0;
+        int tempVal = 0;
+
+        // move elements over one
+        for( index = iterIndex + 1; index > 0; index-- )
+        {
+            iterStorage[ index + 1 ] = iterStorage[ index ];
+        }
+        // put new value where it belongs
+        iterStorage[ iterIndex ] = newValue;
+
+        iterSize++;
     }
 }
