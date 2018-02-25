@@ -14,7 +14,17 @@ public class IteratorClass {
     /**
      * Default integer value to put into newly created integer arrays
      */
-    private static int FILL_VALUE = 0;
+    private static final int FILL_VALUE = 0;
+
+    /**
+     * Character value |
+     */
+    private static final char BAR = '|';
+
+    /**
+     * Character value ' '
+     */
+    private static final char SPACE = ' ';
 
     /**
      * Stores current capacity of utility class
@@ -208,5 +218,41 @@ public class IteratorClass {
         iterStorage[ iterIndex ] = newValue;
 
         iterSize++;
+    }
+
+
+    /**
+     * Provides array data as a string, including indication of current
+     * element.
+     * <p> Note: no spaces at beginning or end of string
+     * @return String result of reported aray
+     */
+    public String toString( )
+    {
+       String returnString = "";
+       int index = 0;
+
+
+      for( index = 0; index < iterSize; index++ )
+      {
+          if( index == iterIndex )
+          {
+              returnString += BAR;
+          }
+
+          returnString += iterStorage[ index ];
+
+          if( index == iterIndex )
+          {
+              returnString += BAR;
+          }
+
+          if( !( index == iterSize - 1 ) ) {
+              returnString += SPACE;
+          }
+      }
+
+      return returnString;
+
     }
 }
