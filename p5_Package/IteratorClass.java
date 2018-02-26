@@ -208,7 +208,6 @@ public class IteratorClass {
         checkForReSize();
 
         int index = 0;
-        int tempVal = 0;
 
         // move elements over one
         for( index = iterSize; index > iterIndex - 1; index-- )
@@ -219,6 +218,31 @@ public class IteratorClass {
         iterStorage[ iterIndex ] = newValue;
 
         iterSize++;
+    }
+
+    /**
+     * Inserts item after iterator index in list
+     * <p> Iterator points at inserted item after completion
+     * <p> Resizes array as needed
+     * @param newValue Element to be inserted into array as specified
+     */
+    public void insertAfterIterator( int newValue )
+    {
+        checkForReSize();
+
+        int index = 0;
+
+        // move elements over one
+        for( index = iterSize; index > iterIndex; index-- )
+        {
+            iterStorage[ index + 1 ] = iterStorage[ index ];
+        }
+        // put new value where it belongs
+        iterIndex++;
+        iterStorage[ iterIndex  ] = newValue;
+
+        iterSize++;
+
     }
 
 
@@ -232,7 +256,6 @@ public class IteratorClass {
     {
        String returnString = "";
        int index = 0;
-
 
       for( index = 0; index < iterSize; index++ )
       {
