@@ -36,4 +36,19 @@ public class StackClass {
     {
         stackData = new IteratorClass( copied.stackData );
     }
+
+    /**
+     * views the value on the top of the stack
+     * @return Integer value found on the top of the stack
+     */
+    public int peekTop()
+    {
+        int returnVal;
+        stackData.setToEnd();
+        returnVal = stackData.retrieveAtCurrent();
+
+        return returnVal;
+    }
+
+    
 }
