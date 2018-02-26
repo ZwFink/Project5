@@ -236,18 +236,29 @@ public class IteratorClass {
 
       for( index = 0; index < iterSize; index++ )
       {
-          if( index == iterIndex )
+          if  ( index == iterIndex
+              // allows bar to display if iterator is at last index
+                      || ( iterIndex == iterSize
+                      && ( index == iterIndex - 1 )
+                         )
+              )
           {
               returnString += BAR;
           }
 
           returnString += iterStorage[ index ];
 
-          if( index == iterIndex )
+           if  ( index == iterIndex
+               // allows bar to display if iterator is at last index
+                      || ( iterIndex == iterSize
+                      && ( index == iterIndex - 1 )
+                         )
+              )
           {
               returnString += BAR;
           }
 
+          // if we're not at the last element
           if( !( index == iterSize - 1 ) ) {
               returnString += SPACE;
           }
