@@ -69,7 +69,6 @@ public class IteratorClass {
        iterSize = 0;
 
        iterStorage = new int[ capacitySetting ];
-       // TODO finish implementation of constructor
     }
 
     /**
@@ -132,7 +131,7 @@ public class IteratorClass {
      */
     public boolean isAtEnd()
     {
-        return ( iterIndex == iterSize );
+        return ( iterIndex == iterSize - 1 );
     }
 
     /**
@@ -180,7 +179,7 @@ public class IteratorClass {
         int index = 0;
         int newCapacity = iterCapacity * 2;
 
-        if( iterSize + 1 >= iterCapacity )
+        if( iterIndex + 2 >= iterCapacity )
         {
            newArray = new int[ newCapacity ];
 
@@ -259,7 +258,12 @@ public class IteratorClass {
     public int removeAtCurrent()
     {
         int index = 0;
-        int valToRemove = iterStorage[ index ];
+        int valToRemove = retrieveAtCurrent();
+
+        if( iterSize == 0 )
+        {
+            return FAILED_ACCESS;
+        }
 
         for( index = iterIndex; index < iterSize; index++ )
         {
@@ -279,7 +283,7 @@ public class IteratorClass {
      * Provides array data as a string, including indication of current
      * element.
      * <p> Note: no spaces at beginning or end of string
-     * @return String result of reported aray
+     * @return String result of reported array
      */
     public String toString( )
     {
