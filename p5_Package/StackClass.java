@@ -50,5 +50,13 @@ public class StackClass {
         return returnVal;
     }
 
-    
+    /**
+     * Places a value on the stack
+     * @param value integer value to be placed on stack
+     */
+    public void push( int value )
+    {
+        stackData.setToEnd();
+        stackData.insertAfterIterator( value );
+    }
 }
