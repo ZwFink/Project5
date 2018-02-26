@@ -66,7 +66,11 @@ public class StackClass {
      */
     public int pop()
     {
+        int returnVal = 0;
 
+        stackData.setToEnd();
+        returnVal = stackData.removeAtCurrent();
+        return returnVal;
     }
 
     /**
