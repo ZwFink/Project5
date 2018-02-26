@@ -206,7 +206,7 @@ public class IteratorClass {
      * Inserts item prior to iterator index in list.
      * <p> Iterator points to inserted item after completion
      * <p> Resizes array if needed
-     * @param newValue
+     * @param newValue Integer value to be inserted
      */
     public void insertPriorToIterator( int newValue )
     {
@@ -248,6 +248,27 @@ public class IteratorClass {
 
         iterSize++;
 
+    }
+
+    /**
+     * Removes and returns value from list at current iterator position
+     * <p> Note: if index is greater than zero, sets iterator to previous item after
+     * removal action
+     * @return Value returned if successful, FAILED_ACCESS if not
+     */
+    public int removeAtCurrent()
+    {
+        int index = 0;
+        int valToRemove = iterStorage[ index ];
+
+        for( index = iterIndex; index < iterSize; index++ )
+        {
+            iterStorage[ index ] = iterStorage[ index + 1 ];
+        }
+        iterSize--;
+        iterIndex--;
+
+        return valToRemove;
     }
 
 
