@@ -135,6 +135,14 @@ public class IteratorClass {
     }
 
     /**
+     * Sets iterator to end of list
+     */
+    public void setToEnd()
+    {
+       iterIndex = iterSize - 1;
+    }
+
+    /**
      * Gets value at current location of iterator
      * @return integer value the item at iterator, FAILED_ACCESS if not
      */
