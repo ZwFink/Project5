@@ -1,5 +1,10 @@
 package p5_Package;
 
+/**
+ * Class provides data storage with iterator Management
+ *
+ * @author Zane Fink
+ */
 public class IteratorClass {
     /**
      * Constant value for initializing default capacity array
@@ -149,7 +154,7 @@ public class IteratorClass {
     public int retrieveAtCurrent()
     {
         if( iterIndex > iterSize ||
-             iterIndex < 0 )
+             isEmpty() )
         {
             return FAILED_ACCESS;
         }
@@ -222,7 +227,7 @@ public class IteratorClass {
         int index = 0;
 
         // move elements over one
-        for( index = iterSize; index > iterIndex - 1; index-- )
+        for( index = iterSize; index > iterIndex- 1; index-- )
         {
             iterStorage[ index + 1 ] = iterStorage[ index ];
         }
