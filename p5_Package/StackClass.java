@@ -1,7 +1,9 @@
 package p5_Package;
 
-import java.util.Stack;
-
+/**
+ * Class manages data in stack form, using IteratorClass
+ * @author Zane Fink
+ */
 public class StackClass {
 
     /**
@@ -14,7 +16,7 @@ public class StackClass {
      */
     public StackClass()
     {
-
+        stackData = new IteratorClass();
     }
 
     /**
@@ -23,7 +25,7 @@ public class StackClass {
      */
     public StackClass( int setCapacity )
     {
-
+    stackData = new IteratorClass( setCapacity );
     }
 
     /**
@@ -32,6 +34,6 @@ public class StackClass {
      */
     public StackClass( StackClass copied )
     {
-
+        stackData = new IteratorClass( copied.stackData );
     }
 }
