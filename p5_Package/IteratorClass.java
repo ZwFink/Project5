@@ -137,10 +137,15 @@ public class IteratorClass {
 
     /**
      * Gets value at current location of iterator
-     * @return integer value the item at iterator
+     * @return integer value the item at iterator, FAILED_ACCESS if not
      */
     public int retrieveAtCurrent()
     {
+        if( iterIndex > iterSize ||
+             iterIndex < 0 )
+        {
+            return FAILED_ACCESS;
+        }
         return iterStorage[ iterIndex ];
     }
 
