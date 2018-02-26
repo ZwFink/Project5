@@ -59,4 +59,21 @@ public class StackClass {
         stackData.setToEnd();
         stackData.insertAfterIterator( value );
     }
+
+    /**
+     * Removes a value from the top of the stack
+     * @return integer value removed from the top of the stack
+     */
+    public int pop()
+    {
+
+    }
+
+    /**
+     * Clears stack data
+     */
+    public void clear()
+    {
+        stackData.clear();
+    }
 }
