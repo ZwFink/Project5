@@ -266,7 +266,10 @@ public class IteratorClass {
             iterStorage[ index ] = iterStorage[ index + 1 ];
         }
         iterSize--;
-        iterIndex--;
+        if( iterIndex > 0 )
+        {
+            iterIndex--;
+        }
 
         return valToRemove;
     }
