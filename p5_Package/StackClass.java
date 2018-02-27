@@ -80,4 +80,10 @@ public class StackClass {
     {
         stackData.clear();
     }
+
+    public String toString()
+    {
+        return stackData.toString();
+    }
+
 }
