@@ -195,16 +195,9 @@ public class IteratorClass {
            newArray = new int[ newCapacity ];
 
 
-           for( index = 0; index < newCapacity; index++ )
+           for( index = 0; index < iterSize; index++ )
            {
-                if( index < iterSize )
-                {
                     newArray[ index ] = iterStorage[ index ];
-                }
-                else
-                {
-                    newArray[ index ] = FILL_VALUE;
-                }
            }
 
            iterStorage = newArray;
