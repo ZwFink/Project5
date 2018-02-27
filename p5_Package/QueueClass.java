@@ -58,6 +58,16 @@ public class QueueClass {
     }
 
     /**
+     * Dequeues data from queue
+     * @return Integer value removed from queue
+     */
+    public int dequeue()
+    {
+       queueData.setToEnd();
+       return queueData.removeAtCurrent();
+    }
+
+    /**
      * Clears queue Data
      */
     public void clear()
