@@ -194,7 +194,8 @@ public class IteratorClass {
         int index = 0;
         int newCapacity = iterCapacity * 2;
 
-        if( iterIndex + 2 >= iterCapacity )
+        if( iterIndex + 2 >= iterCapacity ||
+            iterSize + 2 >= iterCapacity )
         {
            newArray = new int[ newCapacity ];
 
@@ -229,7 +230,7 @@ public class IteratorClass {
         int index = 0;
 
         // move elements over one
-        for( index = iterSize; index > iterIndex- 1; index-- )
+        for( index = iterSize; index > iterIndex - 1; index-- )
         {
             iterStorage[ index + 1 ] = iterStorage[ index ];
         }
