@@ -43,11 +43,8 @@ public class StackClass {
      */
     public int peekTop()
     {
-        int returnVal;
         stackData.setToEnd();
-        returnVal = stackData.retrieveAtCurrent();
-
-        return returnVal;
+        return stackData.retrieveAtCurrent();
     }
 
     /**
@@ -66,11 +63,9 @@ public class StackClass {
      */
     public int pop()
     {
-        int returnVal = 0;
-
         stackData.setToEnd();
-        returnVal = stackData.removeAtCurrent();
-        return returnVal;
+        return stackData.removeAtCurrent();
+
     }
 
     /**
