@@ -54,4 +54,13 @@ public class QueueClass {
     {
         queueData.clear();
     }
+
+    /**
+     * Provides array data as a string
+     * @return
+     */
+    public String toString()
+    {
+        return queueData.toString();
+    }
 }
