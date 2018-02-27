@@ -20,7 +20,7 @@ public class QueueClass {
 
     /**
      * Initialization constructor, constructs QueueClass with initial capacity
-     * @param setCapacity
+     * @param setCapacity Integer capacity of object
      */
     public QueueClass( int setCapacity )
     {
@@ -47,4 +47,11 @@ public class QueueClass {
        return queueData.retrieveAtCurrent();
     }
 
+    /**
+     * Clears queue Data
+     */
+    public void clear()
+    {
+        queueData.clear();
+    }
 }
