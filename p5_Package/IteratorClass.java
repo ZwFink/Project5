@@ -17,11 +17,6 @@ public class IteratorClass {
     private static int FAILED_ACCESS = -999999;
 
     /**
-     * Default integer value to put into newly created integer arrays
-     */
-    private static final int FILL_VALUE = 0;
-
-    /**
      * Character value |
      */
     private static final char BAR = '|';
