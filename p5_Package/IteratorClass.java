@@ -85,11 +85,13 @@ public class IteratorClass {
     {
        iterCapacity = copied.iterCapacity;
        iterIndex = copied.iterIndex;
+       iterSize = copied.iterSize;
+       iterStorage = new int[ iterCapacity ];
 
        int index = 0;
 
        // copy elements of this array to the other's
-       for( index = 0; index < iterCapacity; index++ )
+       for( index = 0; index < iterSize; index++ )
        {
            iterStorage[ index ] = copied.iterStorage[ index ];
        }
