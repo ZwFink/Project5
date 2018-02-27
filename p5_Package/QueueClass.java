@@ -2,6 +2,7 @@ package p5_Package;
 
 /**
  * Class manages data in queue form, using IteratorClass
+ * @author Zane Fink
  */
 public class QueueClass {
     /**
@@ -33,6 +34,17 @@ public class QueueClass {
     public QueueClass( QueueClass copied )
     {
         queueData = new IteratorClass( copied.queueData );
+    }
+
+    /**
+     * Views data at front of queue
+     * @return integer value found at front of queue
+     */
+    public int peekFront()
+    {
+       queueData.setToEnd();
+
+       return queueData.retrieveAtCurrent();
     }
 
 }
