@@ -1,5 +1,8 @@
 package p5_Package;
 
+/**
+ * Class manages data in queue form, using IteratorClass
+ */
 public class QueueClass {
     /**
      * Queue data managed by IteratorClass object
@@ -11,7 +14,7 @@ public class QueueClass {
      */
     public QueueClass()
     {
-
+        queueData = new IteratorClass();
     }
 
     /**
@@ -20,12 +23,16 @@ public class QueueClass {
      */
     public QueueClass( int setCapacity )
     {
-
+        queueData = new IteratorClass( setCapacity );
     }
 
+    /**
+     * Copies a QueueClass object
+     * @param copied QueueClass object to be copied
+     */
     public QueueClass( QueueClass copied )
     {
-
+        queueData = new IteratorClass( copied.queueData );
     }
 
 }
