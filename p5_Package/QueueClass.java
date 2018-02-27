@@ -48,6 +48,16 @@ public class QueueClass {
     }
 
     /**
+     * Enqueues data to queue
+     * @param value integer data to be enqueued
+     */
+    public void enqueue( int value )
+    {
+       queueData.setToBeginning();
+       queueData.insertPriorToIterator( value );
+    }
+
+    /**
      * Clears queue Data
      */
     public void clear()
